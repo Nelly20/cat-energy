@@ -1,0 +1,199 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin container-form {
+  width: 630px;
+  margin: 0 auto;
+}
+
+@mixin underline-none {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+@mixin underline-grey {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: calc((1000vw - 337px) / 2);
+    height: 1px;
+
+    background-color: $special-border-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: calc((1000vw - 337px) / 2);
+    height: 1px;
+
+    background-color: $special-border-color;
+  }
+}
+
+@mixin underline-green-mobile {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+
+    width: calc((1000vw - 337px) / 2);
+    height: 2px;
+
+    background-color: $basic-green;
+  }
+}
+
+@mixin underline-green {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+
+    width: calc((1000vw - 337px) / 2);
+    height: 2px;
+
+    background-color: $basic-green;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+
+    width: calc((1000vw - 337px) / 2);
+    height: 2px;
+
+    background-color: $basic-green;
+  }
+}
+
+@mixin button {
+  width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-align: center;
+
+  border: none;
+  cursor: pointer;
+}
+
+@mixin button-green {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $basic-white;
+  text-transform: uppercase;
+
+  background-color: $basic-green;
+}
+
+@mixin button-grey {
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $basic-dark-grey;
+  text-transform: uppercase;
+
+  background-color: $special-light-grey;
+}
+
+@mixin big-header {
+  font: {
+    size: 36px;
+    weight: 400;
+  };
+  line-height: 36px;
+}
+
+@mixin big-tablet-header {
+  font: {
+    size: 60px;
+    weight: 400;
+  };
+  line-height: 60px;
+}
+
+@mixin subtitle {
+  font: {
+    size: 14px;
+    weight: 400;
+  };
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@mixin small-header {
+  font: {
+    size: 24px;
+    weight: 400;
+  };
+  line-height: 24px;
+}
+
+@mixin product-header {
+  font: {
+    size: 16px;
+    weight: 400;
+  };
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@mixin product-tablet-header {
+  font: {
+    size: 20px;
+    weight: 400;
+  };
+  text-transform: uppercase;
+}
+
+@mixin main-text {
+  font: {
+    family: "Arial", "Helvetica", sans-serif;
+    size: 14px;
+    weight: 400;
+  };
+  line-height: 18px;
+  color: $basic-dark-grey;
+}
+
+@mixin catalog__item-text {
+  font: {
+    family: "Arial", "Helvetica", sans-serif;
+    size: 16px;
+    weight: 400;
+  };
+  color: $basic-dark-grey;
+}
+
+@mixin tablet-main-text {
+  font: {
+    size: 16px;
+    weight: 400;
+  };
+  line-height: 24px;
+}
+
+@mixin small-text {
+  font: {
+    family: "Arial", "Helvetica", sans-serif;
+    size: 12px;
+    weight: 400;
+  };
+  line-height: 12px;
+  text-align: center;
+  color: $basic-dark-grey;
+}
